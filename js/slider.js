@@ -10,14 +10,14 @@ const Images = [
     'images/pic-9.jpg'
 ];
 
-let count = 0;
-const src = document.getElementById('Img');
+let imgIndex = 0;
+const ImgElement = document.getElementById('Slider-image');
 setInterval(() => {
-    if (count >= Images.length){
-        count =0;
+    if (imgIndex >= Images.length){
+        imgIndex =0;
     }
     
-    const Img= Images[count];
-    src.setAttribute('src',Img);
-    count++;
-},3000);
+    const ImgUrl= Images[imgIndex];
+    ImgElement.setAttribute('src',ImgUrl);
+    imgIndex++;
+},2000);
